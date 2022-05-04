@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export default function Header() {
+export default function Footer() {
   return (
     <Container>
-      <h3>Video Library</h3>
+      <strong>Study app developed with ❤ by @breendson</strong>
     </Container>
   );
-};
+}
