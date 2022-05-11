@@ -14,7 +14,7 @@ import {
 } from './styles';
 
 export default function FormModal() {
-  const { handleClose } = useContext(VideoContext);
+  const { handleClose, title, titleHandler, link, linkHandler, handleSubmit } = useContext(VideoContext);
 
   return(
     <Overlay>
@@ -27,7 +27,7 @@ export default function FormModal() {
           </button>
        </Header>
 
-       <FormContainer>
+       <FormContainer onSubmit={ handleSubmit }>
          <FormMain>
 
           <InputGroup>
@@ -36,6 +36,7 @@ export default function FormModal() {
                 id="title"
                 type="text"
                 value={ title }
+                onChange={ titleHandler }
               />
           </InputGroup>
           <InputGroup>
@@ -43,6 +44,8 @@ export default function FormModal() {
               <input
                 id="link"
                 type="text"
+                value={ link }
+                onChange={ linkHandler }
               />
           </InputGroup>
 

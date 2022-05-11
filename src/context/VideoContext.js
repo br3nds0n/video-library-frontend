@@ -1,6 +1,8 @@
 import { createContext, useState } from 'react';
 import FormModal from '../components/FormModal';
 
+import api from '../services/api';
+
 export const VideoContext = createContext();
 
 export function VideoContextProvider({ children }) {
@@ -16,6 +18,27 @@ export function VideoContextProvider({ children }) {
     setOpenFormModal(false)
   }
 
+  function titleHandler(event) {
+    setTitle(event.target.value)
+  }
+
+  function linkHandler(event) {
+    setLink(event.target.value)
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const video = {
+      title,
+      link
+    }
+
+    api.post('video', video)
+
+    setOpenFormModal(false)
+  }
+
   return (
     <VideoContext.Provider value={{
       handleAdd, 
@@ -23,7 +46,10 @@ export function VideoContextProvider({ children }) {
       title, 
       link, 
       setTitle, 
-      setLink
+      setLink,
+      titleHandler,
+      linkHandler,
+      handleSubmit
       }}>
       {children}
       {openFromModal && <FormModal />}
