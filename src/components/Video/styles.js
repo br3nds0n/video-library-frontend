@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
+  /* list-style: none; */
   background: #ffffff;
   padding: 10px;
   height: 200px;
@@ -16,11 +17,9 @@ export const Container = styled.div`
 
   & > h2 {
     color: #1e1e1e;
-    font-size: 16px;
-    text-align: center;
   }
 
-  a {
+  & > p {
     border-left: 3px solid #bbbbbb;
     padding-left: 10px;
     max-width: 230px;
@@ -32,12 +31,6 @@ export const Container = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 `;
 
