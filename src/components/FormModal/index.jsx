@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { EditingVideoContext } from '../../context/EditingVideoContext';
-import { FormModalContext } from '../../context/FormModalContext';
+import React, { useContext } from "react";
+import { EditingVideoContext } from "../../context/EditingVideoContext";
+import { FormModalContext } from "../../context/FormModalContext";
 
 import {
   Overlay,
@@ -12,7 +12,7 @@ import {
   InputGroup,
   Footer,
   CheckIcon,
-} from './styles';
+} from "./styles";
 
 export default function FormModal() {
   const {

@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
+import { FormModalContext } from "../../context/FormModalContext";
+import { EditingVideoContext } from "../../context/EditingVideoContext";
 
-import { FormModalContext } from '../../context/FormModalContext';
-import { EditingVideoContext } from '../../context/EditingVideoContext';
-
-import { AddVideoButton, AddIcon } from './styles';
+import { AddVideoButton, AddIcon } from "./styles";
 
 export default function AddVideo() {
   const { openFormModal, setTitle, setLink } = useContext(FormModalContext);

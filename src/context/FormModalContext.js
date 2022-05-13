@@ -1,18 +1,16 @@
 import { createContext, useContext, useState } from 'react';
 import FormModal from '../components/FormModal';
-
 import { useAxios } from '../hooks/useAxios';
 import api from '../services/api';
-
 import { EditingVideoContext } from './EditingVideoContext';
 
 export const FormModalContext = createContext();
 
 export function FormModalProvider({ children }) {
-  const { data, mutate } = useAxios("video");
+  const { data, mutate } = useAxios('videos');
 
-  const [title, setTitle] = useState("");
-  const [link, setLink] = useState("");
+  const [title, setTitle] = useState('');
+  const [link, setLink] = useState('');
   const [isFormModalUp, setIsFormModalUp] = useState(false);
 
   const { editingVideo } = useContext(EditingVideoContext);
@@ -27,7 +25,7 @@ export function FormModalProvider({ children }) {
     e.preventDefault();
 
     if (editingVideo) {
-      api.put(`video/${editingVideo}`, {
+      api.put(`videos/${editingVideo}`, {
         title,
         link,
       });
@@ -47,7 +45,7 @@ export function FormModalProvider({ children }) {
         title,
         link,
       };
-      api.post('video', video);
+      api.post('videos', video);
 
       const updatedVideos = {
         videos: [...data.videos, video],

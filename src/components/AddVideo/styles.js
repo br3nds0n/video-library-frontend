@@ -6,7 +6,6 @@ export const AddVideoButton = styled.button`
   list-style: none;
   border: 5px dashed #ffffff;
   background-color: rgba(0, 0, 0, 0.04);
-
   padding: 10px;
   height: 200px;
   width: 250px;
@@ -14,7 +13,7 @@ export const AddVideoButton = styled.button`
 
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

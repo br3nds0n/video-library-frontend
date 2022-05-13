@@ -5,6 +5,7 @@ export default createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: 'Lato', sans-serif,
     sans-serif;
   text-decoration: none;
@@ -15,7 +16,7 @@ export default createGlobalStyle`
   #root {
     height: 100vh;
   }
-  
+
   ul, li {
     list-style: none;
   }

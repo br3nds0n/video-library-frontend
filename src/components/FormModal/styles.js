@@ -89,6 +89,7 @@ export const InputGroup = styled.div`
     color: #1e1e1e;
     background-color: #f5f5f5;
     border-radius: 5px;
+
     height: 30px;
     width: 100%;
     padding-left: 10px;
@@ -122,4 +123,3 @@ export const CheckIcon = styled(IoCheckmark)`
   width: 2.4em;
   height: 2.4em;
 `;
-

@@ -7,7 +7,7 @@ export const Container = styled.header`
 
   display: flex;
   align-items: center;
-  
+
   & > h1 {
     color: #1e1e1e;
   }

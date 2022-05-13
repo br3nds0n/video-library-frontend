@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   /* list-style: none; */
@@ -50,7 +50,7 @@ export const Button = styled.button`
   & svg {
     height: 20px;
     width: 20px;
-    color: ${(props) => (props.liked ? "#3EA6FF" : "#1E1E1E")};
+    color: ${(props) => (props.liked ? '#3EA6FF' : '#1E1E1E')};
   }
 
   &:hover {

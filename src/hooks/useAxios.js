@@ -10,7 +10,7 @@ export function useAxios(url) {
 
       return response.data;
     },
-    {}
+    {},
   );
 
   return { data, error, mutate };

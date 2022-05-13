@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from "react";
+import Layout from "./components/Layout";
+import GlobalStyles from "./styles/GlobalStyles";
+import { FormModalProvider } from "./context/FormModalContext";
+import { EditingVideoProvider } from "./context/EditingVideoContext";
 
-import GlobalStyles from './styles/GlobalStyles';
-import Layout from './components/Layout';
-
-import { VideoContextProvider } from './context/VideoContext'
-
-class App extends Component {
-  render() {
-    return (
-      <>
-      <VideoContextProvider> 
-       <Layout />
-      </VideoContextProvider>
+export default function App() {
+  return (
+    <>
+      <EditingVideoProvider>
+        <FormModalProvider>
+          <Layout />
+        </FormModalProvider>
+      </EditingVideoProvider>
       <GlobalStyles />
-      </>
-    );
-  }
-}
+    </>
 
-export default App;
+    
+  )
+}

@@ -1,22 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import { IoTrashBin, IoThumbsUp, IoPencil } from 'react-icons/io5';
-import { EditingVideoContext } from '../../context/EditingVideoContext';
+import { IoTrashBin, IoThumbsUp, IoPencil } from "react-icons/io5";
+import { EditingVideoContext } from "../../context/EditingVideoContext";
+import { FormModalContext } from "../../context/FormModalContext";
+import { useAxios } from "../../hooks/useAxios";
 
-import { FormModalContext } from '../../context/FormModalContext';
-import { useAxios } from '../../hooks/useAxios';
-import api from '../../services/api';
+import api from "../../services/api";
 
-import { Container, ButtonArea, Button } from  './styles';
+import { Container, ButtonArea, Button } from "./styles";
 
 export default function Video({ id, title, link, liked }) {
   const { handleEditMode } = useContext(FormModalContext);
   const { setEditingVideo } = useContext(EditingVideoContext);
 
-  const { data, mutate } = useAxios("video");
+  const { data, mutate } = useAxios("videos");
 
   function handleLike() {
-    api.patch(`/video/${id}`);
+    api.patch(`/videos/${id}`);
 
     const updatedVideos = {
       videos: data.videos?.map((video) => {
@@ -31,7 +31,7 @@ export default function Video({ id, title, link, liked }) {
   }
 
   function handleDelete() {
-    api.delete(`/video/${id}`);
+    api.delete(`/videos/${id}`);
 
     const updatedVideos = {
       videos: data.videos?.filter((video) => video._id !== id),
