@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 export default function Header() {
   return (
     <Container>
-      <h3>Video Library</h3>
+      <h3>videoteca</h3>
     </Container>
   );
-};
+}
